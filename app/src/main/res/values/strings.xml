@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ReadGate</string>
+    <string name="accessibility_service_description">ReadGate monitors which app you open to block distracting apps.</string>
+</resources>
