@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -38,6 +38,8 @@
                 android:resource="@xml/accessibility_service_config"/>
         </service>
 
+        <activity android:name=".BookImportActivity" />
+        <activity android:name=".PagePickerActivity" />
     </application>
 
 </manifest>

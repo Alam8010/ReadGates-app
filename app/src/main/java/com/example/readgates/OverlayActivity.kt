@@ -16,20 +16,7 @@ import androidx.core.content.ContextCompat
 
 class OverlayActivity : Activity() {
 
-    private val bookText = """
-        It was the best of times, it was the worst of times, it was the age of wisdom, 
-        it was the age of foolishness, it was the epoch of belief, it was the epoch of 
-        incredulity, it was the season of Light, it was the season of Darkness, it was 
-        the spring of hope, it was the winter of despair, we had everything before us, 
-        we had nothing before us, we were all going direct to Heaven, we were all going 
-        direct the other way.
-
-        There were a king with a large jaw and a queen with a plain face, on the throne 
-        of England; there were a king with a large jaw and a queen with a fair face, on 
-        the throne of France. In both countries it was clearer than crystal to the lords 
-        of the State preserves of loaves and fishes, that things in general were settled 
-        for ever.
-    """.trimIndent()
+    private var bookText = ""
 
     private var spokenSoFar = ""
     private lateinit var tvProgress: TextView
@@ -41,6 +28,8 @@ class OverlayActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_overlay)
 
+        bookText = BookPrefs.getText(this)
+            ?: "No book selected. Open ReadGate and choose a book and page first."
         findViewById<TextView>(R.id.tvBookText).text = bookText
         tvProgress = findViewById(R.id.tvProgress)
         btnCheck = findViewById(R.id.btnCheck)
@@ -61,6 +50,8 @@ class OverlayActivity : Activity() {
             checkMatch()
         }
     }
+
+
 
     private fun setupSpeechRecognizer() {
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this)

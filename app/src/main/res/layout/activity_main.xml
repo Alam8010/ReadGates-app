@@ -4,29 +4,38 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="32dp">
+    android:padding="28dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="📚 ReadGate"
-        android:textSize="32sp"
+        android:textSize="34sp"
         android:textStyle="bold"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="24dp" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvCurrentBook"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tap below to enable the app blocker in Accessibility Settings"
+        android:text="No book selected yet."
         android:textSize="16sp"
         android:gravity="center"
-        android:layout_marginBottom="40dp"/>
+        android:layout_marginBottom="28dp" />
 
     <Button
-        android:id="@+id/btnEnable"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnChooseBook"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enable ReadGate"
-        android:textSize="18sp"/>
+        android:text="Choose Book &amp; Page" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remember to enable Accessibility Service after every reinstall."
+        android:textSize="12sp"
+        android:gravity="center"
+        android:textColor="#999999"
+        android:layout_marginTop="36dp" />
 
 </LinearLayout>

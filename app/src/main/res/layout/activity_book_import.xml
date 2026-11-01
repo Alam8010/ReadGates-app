@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Import a Book"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Pick Book File (.txt)"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="#888888"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnPickFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pick a .txt book file from your phone."/>
+
+    <TextView
+        android:id="@+id/tvFileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No file selected"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnBrowsePages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Browse Pages →"
+        android:enabled="false" />
+
+</LinearLayout>
